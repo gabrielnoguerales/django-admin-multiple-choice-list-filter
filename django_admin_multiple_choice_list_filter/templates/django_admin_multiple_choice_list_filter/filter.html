@@ -23,7 +23,16 @@
         }
     }
 </script>
-
+<style>
+    #changelist-filter .mulitple-choice li::before {
+        content: "\2610\00A0";
+        float: left;
+        font-size: 20px;
+    }
+    #changelist-filter .mulitple-choice li.selected::before {
+        content: "\2611\00A0";
+    }
+</style>
 <input type="text" id="myInput{{ id_name }}" onkeyup="searchFun{{ id_name }}()" placeholder={% trans "Search" %}>
 <br>
 <ul id="myUl{{ id_name }}" class="mulitple-choice" style="height:200px; overflow:auto;">
